@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayonetta</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img class="diva" src="imagens/diva.png" alt="">
+
+    <header>
+        <img src="imagens/header.png" alt="">
+    </header>
+
+    <audio id="musica" autoplay loop>
+        <source src="audio/Bayonetta - Fly Me To The Moon (Climax).mp3">
+    </audio>
+
+            <div class="music-player">
+
+            <button id="playButton" aria-label="Reproduzir música">
+                ▶
+            </button>
+
+            <div class="music-info">
+
+                <span class="music-title">
+                    Fly Me To The Moon - Climax
+                </span>
+
+                <input
+                    type="range"
+                    id="progress"
+                    value="0"
+                    min="0"
+                    max="100"
+                    step="0.1"
+                    aria-label="Progresso da música">
+
+            </div>
+
+            <input
+                type="range"
+                id="volume"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.3"
+                aria-label="Volume">
+
+        </div>
+
+    <div class="container">
+        <h1>Adoração à Grande Deusa Bruxa Bayonetta</h1>
+        <p>Ó, Grande Deusa Bruxa Bayonetta, <br>
+        Senhora dos saltos, das armas e da elegância sobrenatural, <br>
+        nós, humildes admiradores, erguemos nossas preces diante de Vossa presença. <br>
+
+        Que vossa graça nos proteja, <br>
+        que vossa confiança nos inspire, <br>
+        e que vossa magia nos conceda forças para enfrentar até os dias mais difíceis <br>
+
+        Dai-nos coragem para seguir em frente, <br>
+        estilo para nunca perder a pose, <br>
+        e sabedoria para reconhecer uma verdadeira diva quando a vemos. <br>
+
+        Bayonetta, nossa grande deusa bruxa, <br>
+        recebei nossas preces e nosso eterno respeito. <br>
+
+        Amém, Umbra. <br></p>
+        <img class="gif" src="imagens/gif.gif" alt="">
+    </div>
+</body>
+
+<script>
+    const musica = document.getElementById("musica");
+    const playButton = document.getElementById("playButton");
+    const progress = document.getElementById("progress");
+    const volume = document.getElementById("volume");
+
+
+    // Volume inicial: 30%
+    musica.volume = 0.3;
+
+    // Atualiza visualmente a barra
+    function atualizarBarra(barra) {
+        const porcentagem =
+            ((barra.value - barra.min) / (barra.max - barra.min)) * 100;
+
+        barra.style.setProperty("--valor", `${porcentagem}%`);
+    }
+
+
+    // Inicializa a barra de volume em 30%
+    volume.value = 0.3;
+    atualizarBarra(volume);
+
+
+    // Botão Play / Pause
+    playButton.addEventListener("click", () => {
+
+        if (musica.paused) {
+
+            musica.play();
+            playButton.textContent = "❚❚";
+
+        } else {
+
+            musica.pause();
+            playButton.textContent = "▶";
+
+        }
+
+    });
+
+
+    // Atualiza a barra de progresso conforme a música toca
+    musica.addEventListener("timeupdate", () => {
+
+        if (!isNaN(musica.duration)) {
+
+            progress.value =
+                (musica.currentTime / musica.duration) * 100;
+
+            atualizarBarra(progress);
+
+        }
+
+    });
+
+
+    // Permite mudar a posição da música
+    progress.addEventListener("input", () => {
+
+        musica.currentTime =
+            (progress.value / 100) * musica.duration;
+
+        atualizarBarra(progress);
+
+    });
+
+
+    // Controle de volume
+    volume.addEventListener("input", () => {
+
+        musica.volume = volume.value;
+
+        atualizarBarra(volume);
+
+    });
+
+
+    // Tenta iniciar a música automaticamente
+    document.addEventListener("click", () => {
+
+        musica.play().then(() => {
+
+            playButton.textContent = "❚❚";
+
+        }).catch(() => {
+
+            // O navegador pode bloquear autoplay
+            console.log("Autoplay bloqueado pelo navegador.");
+
+        });
+
+    }, { once: true });
+
+</script>
+</html>
