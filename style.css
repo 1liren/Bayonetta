@@ -210,7 +210,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 50px;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* original: 20px */
     align-items: start;
 }
 
@@ -235,8 +235,8 @@ nav a:hover {
 }
 
 .mini-card img {
-    width: 50px;
-    height: 68px;
+    width: 70px; /* original: 50px */
+    height: 90px; /* original: 68px */
     object-fit: cover;
     display: block;
 }
