@@ -54,11 +54,6 @@ nav a:hover {
     background-color: rgb(245, 245, 245);
 }
 
-nav a:active {
-    background-color: transparent;
-}
-
-
 /*********************** CONTEÚDO */
 /* .grid {
   display: grid;
@@ -104,10 +99,6 @@ nav a:active {
 
 .grid h2:hover {
     text-decoration: underline;
-}
-
-.grid a:active {
-    background-color: transparent;
 }
 
 /* --------------------
@@ -161,10 +152,6 @@ nav a:active {
     font-weight: 400;
 }
 
-.side-card a:active {
-    background-color: transparent;
-}
-
 /* --------------------
    MATÉRIA PRINCIPAL
 -------------------- */
@@ -207,10 +194,6 @@ nav a:active {
     text-decoration: underline;
 }
 
-.main-story a:active {
-    background-color: transparent;
-}
-
 /* --------------------
    DIREITA
 -------------------- */
@@ -246,10 +229,6 @@ nav a:active {
     font-family: 'Vogue 2';
     font-size: 14px;
     font-weight: 400;
-}
-
-.mini-card a:active {
-    background-color: transparent;
 }
 
 .mini-card img {
@@ -306,10 +285,6 @@ nav a:active {
     background-color: rgb(245, 245, 245);
 }
 
-.btn-sidebar a:active {
-    background-color: transparent;
-}
-
 /* Estilo da Janela Lateral (Sidebar) */
 .sidebar {
     height: 100%;
@@ -338,9 +313,6 @@ nav a:active {
     right: 0;
 }
 
-.sidebar a:active {
-    background-color: transparent;
-}
 
 /* Botão de fechar dentro da sidebar */
 .close-btn {
@@ -353,10 +325,6 @@ nav a:active {
     cursor: pointer;
 
     color: black;
-}
-
-.close-btn a:active {
-    background-color: transparent;
 }
 
 /* Overlay (fundo escuro) quando sidebar está aberta */
@@ -390,10 +358,6 @@ nav a:active {
 
 .sidebar a:hover {
     background-color: rgb(245, 245, 245);
-}
-
-.sidebar a:active {
-    background-color: transparent;
 }
 
 .sidebar h3 {
@@ -587,10 +551,6 @@ nav a:active {
     text-decoration: underline;
 }
 
-.footer a:active {
-    background-color: transparent;
-}
-
 /* Parte inferior */
 
 .footer-bottom {
@@ -620,10 +580,6 @@ nav a:active {
 .footer-social {
     display: flex;
     gap: 20px;
-}
-
-.footer-social a:active {
-    background-color: transparent;
 }
 
 /************************ RESPONSIVIDADE DO FOOTER ************************/
