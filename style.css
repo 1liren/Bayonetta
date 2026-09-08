@@ -56,18 +56,17 @@ nav a:hover {
 
 
 /*********************** CONTEÚDO */
-.grid {
+/* .grid {
   display: grid;
 
-  /* 12 colunas */
+
   grid-template-columns: repeat(12, 1fr);
 
-  /* espaço entre colunas */
   gap: 16px;
 
   max-width: 760px;
   margin: 0 auto;
-}
+} */
 
 .left-column {
   grid-column: span 3;
@@ -208,7 +207,7 @@ nav a:hover {
 
 .mini-card {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 50px;
+    grid-template-columns: minmax(0, 1fr) 70px;
     gap: 10px;
     margin-bottom: 30px; /* original: 20px */
     align-items: start;
@@ -245,7 +244,8 @@ nav a:hover {
 
   .grid {
     grid-template-columns: 1fr;
-    margin: 20px;
+
+    margin: 20px auto;
   }
 
   .left-column,
