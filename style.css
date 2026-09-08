@@ -54,6 +54,10 @@ nav a:hover {
     background-color: rgb(245, 245, 245);
 }
 
+nav a:active {
+    background-color: transparent;
+}
+
 
 /*********************** CONTEÚDO */
 /* .grid {
@@ -100,6 +104,10 @@ nav a:hover {
 
 .grid h2:hover {
     text-decoration: underline;
+}
+
+.grid a:active {
+    background-color: transparent;
 }
 
 /* --------------------
@@ -153,6 +161,9 @@ nav a:hover {
     font-weight: 400;
 }
 
+.side-card a:active {
+    background-color: transparent;
+}
 
 /* --------------------
    MATÉRIA PRINCIPAL
@@ -196,6 +207,10 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.main-story a:active {
+    background-color: transparent;
+}
+
 /* --------------------
    DIREITA
 -------------------- */
@@ -231,6 +246,10 @@ nav a:hover {
     font-family: 'Vogue 2';
     font-size: 14px;
     font-weight: 400;
+}
+
+.mini-card a:active {
+    background-color: transparent;
 }
 
 .mini-card img {
@@ -287,6 +306,10 @@ nav a:hover {
     background-color: rgb(245, 245, 245);
 }
 
+.btn-sidebar a:active {
+    background-color: transparent;
+}
+
 /* Estilo da Janela Lateral (Sidebar) */
 .sidebar {
     height: 100%;
@@ -315,6 +338,10 @@ nav a:hover {
     right: 0;
 }
 
+.sidebar a:active {
+    background-color: transparent;
+}
+
 /* Botão de fechar dentro da sidebar */
 .close-btn {
     position: absolute;
@@ -326,6 +353,10 @@ nav a:hover {
     cursor: pointer;
 
     color: black;
+}
+
+.close-btn a:active {
+    background-color: transparent;
 }
 
 /* Overlay (fundo escuro) quando sidebar está aberta */
@@ -359,6 +390,10 @@ nav a:hover {
 
 .sidebar a:hover {
     background-color: rgb(245, 245, 245);
+}
+
+.sidebar a:active {
+    background-color: transparent;
 }
 
 .sidebar h3 {
@@ -552,6 +587,9 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.footer a:active {
+    background-color: transparent;
+}
 
 /* Parte inferior */
 
@@ -584,6 +622,9 @@ nav a:hover {
     gap: 20px;
 }
 
+.footer-social a:active {
+    background-color: transparent;
+}
 
 /************************ RESPONSIVIDADE DO FOOTER ************************/
 
