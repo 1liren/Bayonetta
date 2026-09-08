@@ -1,278 +1,644 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kalam:wght@300;400;700&display=swap');
+@font-face {
+    font-family: 'Vogue';
+    src: url(font/vogue.ttf);
+}
 
 @font-face {
-    font-family: 'Bayonetta';
-    src: url('font/bayonetta.otf');
-    font-weight: normal;
+    font-family: 'Vogue 2';
+    src: url(font/vogue2.ttf);
 }
 
 body {
+    background-color: white;
+
     margin: 0px;
-
-    background-image: url('imagens/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
-h1 {
-    color: white;
-
+.titulo-diva {
+    color: black;
+    font-family: 'Vogue';
+    font-size: 70px;
+    font-weight: normal;
     text-align: center;
-    font-family: 'Bayonetta';
-
-    margin: auto;
-}
-
-p {
-    color: white;
-    
-    text-align: center;
-    font-family: 'Kalam';
-
-    margin: 30px;
-}
-
-.diva {
-    position: fixed;
-    left: 10px;
-    bottom: 0;
-
-    z-index: 9999;
-
-    width: clamp(80px, 50vw, 400px);
-    height: auto;
-}
-
-header {
-    text-align: center;
-
-    margin: 30px;
-}
-
-header img {
-    width: 300px;
-}
-
-/************************ CONTAINER ************************/
-
-.container {
-    background: rgba(0, 0, 0, 0.470);
-    border: 1px solid #DAA520;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-
-    width: min(90%, 1000px);
-    min-height: 100vh;
 
     margin: 30px auto;
-    padding: 30px;
-
-    box-sizing: border-box;
 }
 
-.gif {
-    display: block;
-
-    max-width: 100%;
-    height: auto;
-
-    margin: 20px auto;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
-
-        padding: 20px;
-        margin: 15px auto;
-    }
-
-    header img {
-        max-width: 90%;
-        height: auto;
-    }
-
-    .gif {
-        max-width: 90%;
-    }
-}
-
-.music-player {
-    width: 90%;
-    max-width: 500px;
-
-    margin: 30px auto;
-    padding: 15px;
-
+.navbar {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    gap: 20px;
 
-    background: rgba(0, 0, 0, 0.470);
-    border: 1px solid #DAA520;
-    border-radius: 16px;
+    justify-content: center;
 
-    box-sizing: border-box;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}   
 
-    font-family: 'Kalam';
+nav a {
+    font-family: 'Vogue 2';
+
+    text-decoration: none;
+    color: black;
+
+    padding: 10px 10px;
+
+    transition: 0.4s ease;
 }
 
-/* BOTÃO PLAY */
+nav a:hover {
+    background-color: rgb(245, 245, 245);
+}
 
-.music-player button {
-    width: 45px;
-    height: 45px;
 
-    border: none;
-    border-radius: 50%;
+/*********************** CONTEÚDO */
+.grid {
+  display: grid;
 
-    background: #8b0000;
-    color: white;
+  /* 12 colunas */
+  grid-template-columns: repeat(12, 1fr);
 
+  /* espaço entre colunas */
+  gap: 16px;
+
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.left-column {
+  grid-column: span 3;
+}
+
+.main-story {
+  grid-column: span 6;
+}
+
+.right-column {
+  grid-column: span 3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.grid h2 {
+    font-family: 'Vogue 2';
+}
+
+.grid h2:hover {
+    text-decoration: underline;
+}
+
+/* --------------------
+   ESQUERDA
+-------------------- */
+
+.left-column {
+  grid-column: span 3;
+}
+
+.side-card {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.side-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.side-card span,
+.main-story span,
+.mini-card span {
+  display: block;
+  margin-top: 6px;
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: .5px;
+}
+
+.side-card h2 {
+  margin: 8px 0;
+  font-family: 'Vogue 2';
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.side-card span {
+    font-family: 'Vogue 2';
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.side-card small {
+    font-family: 'Vogue 2';
+    font-size: 14px;
+    letter-spacing: .5px;
+    font-weight: 400;
+}
+
+
+/* --------------------
+   MATÉRIA PRINCIPAL
+-------------------- */
+
+.main-story {
+  grid-column: span 6;
+  text-align: center;
+}
+
+.main-story img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.main-story h1 {
+  margin: 8px 0;
+  font-family: 'Vogue 2';
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.main-story span {
+    font-family: 'Vogue 2';
+    font-size: 15px;
+    font-weight: 400;
+
+    margin: 10px;
+}
+
+.main-story small {
+    font-family: 'Vogue 2';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.main-story h1:hover {
+    text-decoration: underline;
+}
+
+/* --------------------
+   DIREITA
+-------------------- */
+
+.right-column {
+    grid-column: span 3;
+    min-width: 0;
+}
+
+.mini-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 50px;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: start;
+}
+
+.mini-card h2 {
+    margin: 8px 0;
+    font-family: 'Vogue 2';
     font-size: 18px;
+    line-height: 1.15;
+    font-weight: 600;
+}
+
+.mini-card span {
+    font-family: 'Vogue 2';
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.mini-card small {
+    font-family: 'Vogue 2';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.mini-card img {
+    width: 50px;
+    height: 68px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 700px) {
+
+  .grid {
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
+
+  .left-column,
+  .main-story,
+  .right-column {
+    grid-column: 1;
+  }
+
+  .main-story {
+    order: -1;
+  }
+}
+
+/************************ JANELA LATERAL ************************/
+
+.btn-sidebar {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    background-color: white;
+    color: black;
+
+    padding: 10px 10px;
+    border: none;
 
     cursor: pointer;
 
-    transition: 0.2s;
+    border-radius: 4px;
+
+    font-size: 18px;
+    font-family: 'Vogue 2';
+    font-weight: 400;
+
+    transition: 0.4s ease;
 }
 
-.music-player button:hover {
-    transform: scale(1.1);
+.btn-sidebar:hover {
+    background-color: rgb(245, 245, 245);
 }
 
-/* ÁREA DA MÚSICA */
+/* Estilo da Janela Lateral (Sidebar) */
+.sidebar {
+    height: 100%;
+    width: 600px;
 
-.music-info {
-    flex: 1;
+    position: fixed;
+    top: 0;
+    right: -600px; /* Escondida à direita */
+
+    background-color: white;
+
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+
+    transition: right 0.4s ease; /* Animação suave */
+
+    z-index: 1000;
+
+    padding-top: 60px;
 
     display: flex;
     flex-direction: column;
-    gap: 6px;
 }
 
-.music-title {
-    color: white;
-    font-size: 14px;
+/* Classe para mostrar a sidebar */
+.sidebar.active {
+    right: 0;
 }
 
+/* Botão de fechar dentro da sidebar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 15px;
 
-/* BARRAS */
+    font-size: 30px;
 
-.music-player input[type="range"] {
     cursor: pointer;
+
+    color: black;
 }
 
+/* Overlay (fundo escuro) quando sidebar está aberta */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-/* PROGRESSO */
-
-#progress {
     width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    display: none;
+
+    z-index: 999;
+}
+.overlay.active { display: block; }
+
+.sidebar a {
+    font-family: 'Vogue 2';
+    font-weight: 400;
+
+    color: black;
+    text-decoration: none;
+
+    padding: 20px;
+
+    transition: 0.4s ease;
+}
+
+.sidebar a:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.sidebar h3 {
+    text-decoration: none;
+
+    margin: 10px;
+}
+
+/************************ RESPONSIVIDADE DA SIDEBAR ************************/
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 450px;
+        right: -450px;
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
+
+    .sidebar a {
+        padding: 18px;
+    }
+
+    .sidebar h3 {
+        margin: 10px;
+    }
 }
 
 
-/* VOLUME */
+/* Celulares */
+@media (max-width: 600px) {
 
-#volume {
-    width: 80px;
+    .btn-sidebar {
+        right: 8px;
+        top: 8px;
+
+        padding: 8px;
+
+        font-size: 16px;
+    }
+
+    .sidebar {
+        width: 100%;
+        right: -100%;
+
+        padding-top: 60px;
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
+
+    .close-btn {
+        top: 10px;
+        left: 15px;
+
+        font-size: 28px;
+    }
+
+    .sidebar a {
+        padding: 18px 20px;
+
+        font-size: 16px;
+    }
+
+    .sidebar h3 {
+        margin: 10px 20px;
+        font-size: 18px;
+    }
 }
 
-/* BARRAS DO PLAYER */
-.music-player input[type="range"] {
-    appearance: none;
-    -webkit-appearance: none;
+/************************ RESPONSIVIDADE DO HEADER ************************/
 
-    height: 6px;
-    border-radius: 10px;
+@media (max-width: 900px) {
 
-    /* preenchida = amarelo
-       restante = vermelho */
-    background: linear-gradient(
-        to right,
-        #DAA520 0%,
-        #DAA520 var(--valor, 0%),
-        #8b0000 var(--valor, 0%),
-        #8b0000 100%
-    );
+    .titulo-diva {
+        font-size: 45px;
+        margin: 25px auto;
+    }
 
-    cursor: pointer;
+    .navbar {
+        gap: 15px;
+    }
+
+    nav a {
+        padding: 9px 8px;
+        font-size: 14px;
+    }
 }
 
-
-/* BOLINHA */
-.music-player input[type="range"]::-webkit-slider-thumb {
-    appearance: none;
-    -webkit-appearance: none;
-
-    width: 15px;
-    height: 15px;
-
-    border-radius: 50%;
-
-    background: #DAA520;
-    border: 2px solid white;
-
-    transition: 0.2s;
-}
-
-
-/* HOVER */
-.music-player input[type="range"]::-webkit-slider-thumb:hover {
-    transform: scale(1.25);
-    background: #DAA520;
-}
-
-
-/* FIREFOX */
-.music-player input[type="range"]::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-
-    border-radius: 50%;
-
-    background: #DAA520;
-    border: 2px solid #8b0000;
-
-    transition: 0.2s;
-}
-
-
-.music-player input[type="range"]::-moz-range-thumb:hover {
-    transform: scale(1.25);
-    background: #fff36a;
-}
 
 @media (max-width: 600px) {
-    .music-player {
-        width: 95%;
-        padding: 12px;
-        gap: 10px;
+
+    .titulo-diva {
+        font-size: 38px;
+        margin: 20px auto;
+    }
+
+    .navbar {
+        gap: 5px;
+
         flex-wrap: wrap;
     }
 
-    .music-player button {
-        width: 42px;
-        height: 42px;
-        flex-shrink: 0;
-    }
-
-    .music-info {
-        min-width: 0;
-        flex: 1;
-    }
-
-    .music-title {
+    nav a {
+        padding: 8px 6px;
         font-size: 13px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .titulo-diva {
+        font-size: 34px;
+        margin: 18px auto;
     }
 
-    #progress {
-        width: 100%;
+    .navbar {
+        gap: 2px;
     }
 
-    #volume {
-        width: 70px;
+    nav a {
+        padding: 7px 5px;
+        font-size: 12px;
+    }
+}
+
+/************************ FOOTER ************************/
+
+.footer {
+    margin-top: 80px;
+
+    background-color: black;
+    color: white;
+
+    padding: 50px 0 20px;
+}
+
+
+/* Parte principal */
+
+.footer-main {
+    width: calc(100% - 40px);
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-bottom: 50px;
+
+    border-bottom: 1px solid #444;
+}
+
+
+.footer-logo {
+    font-family: 'Vogue';
+    font-size: 42px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+
+/* Links */
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer a {
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Vogue 2';
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Parte inferior */
+
+.footer-bottom {
+    width: calc(100% - 40px);
+    max-width: 1200px;
+
+    margin: 20px auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    font-family: 'Vogue 2';
+
+    font-size: 9px;
+    letter-spacing: 1px;
+
+    color: #aaa;
+}
+
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+
+/************************ RESPONSIVIDADE DO FOOTER ************************/
+
+@media (max-width: 700px) {
+  .footer {
+    margin-top: 50px;
+    padding: 40px 0 20px;
+    text-align: center;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+
+  .footer-logo {
+    font-size: 34px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 25px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+
+@media (max-width: 400px) {
+
+    .footer-logo {
+        font-size: 28px;
+    }
+
+    .footer-links {
+        gap: 12px 18px;
+    }
+
+    .footer a {
+        font-size: 10px;
+    }
+
+    .footer-bottom p {
+        font-size: 8px;
     }
 }

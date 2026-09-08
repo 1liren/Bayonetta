@@ -3,170 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bayonetta</title>
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Bayonetta - More than a woman</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon2.png" type="image/x-icon">
 </head>
 <body>
-    <img class="diva" src="imagens/diva.png" alt="">
 
-    <header>
-        <img src="imagens/header.png" alt="">
-    </header>
+        <!-- Navegação -->
+        <nav>
+            <button id="openBtn" class="btn-sidebar">MENU ☰</button>
+        </nav>
 
-    <audio id="musica" autoplay loop>
-        <source src="audio/Bayonetta - Fly Me To The Moon (Climax).mp3">
-    </audio>
+        <!-- Overlay -->
+        <div id="overlay" class="overlay"></div>
 
-            <div class="music-player">
-
-            <button id="playButton" aria-label="Reproduzir música">
-                ▶
-            </button>
-
-            <div class="music-info">
-
-                <span class="music-title">
-                    Fly Me To The Moon - Climax
-                </span>
-
-                <input
-                    type="range"
-                    id="progress"
-                    value="0"
-                    min="0"
-                    max="100"
-                    step="0.1"
-                    aria-label="Progresso da música">
-
-            </div>
-
-            <input
-                type="range"
-                id="volume"
-                min="0"
-                max="1"
-                step="0.01"
-                value="0.3"
-                aria-label="Volume">
-
+        <!-- Janela Lateral -->
+        <div id="mySidebar" class="sidebar">
+            <span class="close-btn" id="closeBtn">&times;</span>
+                <a href="">ABOUT</a>
+                <a href="">GAME</a>
+                <a href="">SCREENSHOTS</a>
+                <a href="">GAMEPLAY</a>
+                <a href="">FASHION</a>
+                <a href="">GUNS</a>
+                <a href="">CHAPTERS</a>
+                <a href="">LORE</a>
+                <a href="">PLATINUM GAMES</a>
         </div>
 
-    <div class="container">
-        <h1>Adoração à Grande Deusa Bruxa Bayonetta</h1>
-        <p>Ó, Grande Deusa Bruxa Bayonetta, <br>
-        Senhora dos saltos, das armas e da elegância sobrenatural, <br>
-        nós, humildes admiradores, erguemos nossas preces diante de Vossa presença. <br>
 
-        Que vossa graça nos proteja, <br>
-        que vossa confiança nos inspire, <br>
-        e que vossa magia nos conceda forças para enfrentar até os dias mais difíceis <br>
+        <h1 class="titulo-diva">B A Y O N E T T A</h1>
 
-        Dai-nos coragem para seguir em frente, <br>
-        estilo para nunca perder a pose, <br>
-        e sabedoria para reconhecer uma verdadeira diva quando a vemos. <br>
+        <header>
+            <nav class="navbar">
+                <a href="">FASHION</a>
+                <a href="">BEAUTY</a>
+                <a href="">CULTURE</a>
+                <a href="">LORE</a>
+                <a href="">FEATURES</a>
+            </nav>
+        </header>
 
-        Bayonetta, nossa grande deusa bruxa, <br>
-        recebei nossas preces e nosso eterno respeito. <br>
+        <main class="grid">
+            <!-- COLUNA ESQUERDA -->
+             <section class="left-column">
+                <article class="side-card">
+                    <a href="">
+                        <img src="imagens/mini1.jpg" alt="">
+                        <span>BEAUTY</span>
+                            <h2>THE LOOK OF BAYONETTA</h2>
+                        <small>BY PLATINUM GAMES</small>
+                    </a>
+                </article>
 
-        Amém, Umbra. <br></p>
-        <img class="gif" src="imagens/gif.gif" alt="">
-    </div>
+                <article class="side-card">
+                    <a href="">
+                        <img src="imagens/mini2.jpg" alt="">
+                        <span>FASHION</span>
+                            <H2>HIGH HEELS, GUNS & ATTITUDE</H2>
+                        <small>BY PLATINUM GAMES</small>
+                    </a>
+                </article>
+             </section>
+
+             <!-- MATÉRIA PRINCIPAL -->
+              <section class="main-story">
+                <a href="">
+                    <img src="imagens/principal.jpg" alt="">
+                    <span>MAIN EDITORIAL</span>
+                        <h1>BAYONETTA <br>THE WITCH WHO TURNED COMBAT INTO HIGH FASHION</h1>
+                    <small>POR VOGUE</small>
+                </a>
+              </section>
+
+              <!-- COLUNA DIREITA -->
+               <section class="right-column">
+                <article class="mini-card">
+                    <div>
+                        <a href="">
+                            <span>ICON</span>
+                                <h2>THE MOST ICONIC WITCH IN GAMING</h2>
+                            <small>BY PLATINUM GAMES</small>
+                    </div>
+                    <img src="imagens/mini3.jpg" alt="">
+                        </a>
+                </article>
+
+                <article class="mini-card">
+                    <div>
+                        <a href="">
+                            <span>STYLE</span>
+                                <h2>THE GUN-WIELDING GUARDIAN — A WITCH</h2>
+                            <small>BY PLATINUM GAMES</small>
+                    </div>
+                    <img src="imagens/mini4.jpg" alt="">
+                        </a>
+                </article>
+
+                <article class="mini-card">
+                    <div>
+                        <a href="">
+                            <span>CULTURE</span>
+                                <h2>FROM JEANNE TO BAYONETTA</h2>
+                            <small>BY PLATINUM GAMES</small>
+                    </div>
+                    <img src="imagens/mini5.webp" alt="">
+                        </a>
+                </article>
+               </section>
+        </main>
+
+            <script>
+        // Selecionando elementos
+        const openBtn = document.getElementById('openBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('mySidebar');
+        const overlay = document.getElementById('overlay');
+
+        // Função para abrir
+        function abrirSidebar() {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+        }
+
+        // Função para fechar
+        function fecharSidebar() {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        // Event Listeners
+        openBtn.addEventListener('click', abrirSidebar);
+        closeBtn.addEventListener('click', fecharSidebar);
+        overlay.addEventListener('click', fecharSidebar); // Fecha ao clicar fora
+    </script>
 </body>
+<footer class="footer">
 
-<script>
-    const musica = document.getElementById("musica");
-    const playButton = document.getElementById("playButton");
-    const progress = document.getElementById("progress");
-    const volume = document.getElementById("volume");
+    <div class="footer-main">
 
+        <div class="footer-logo">
+            BAYONETTA
+        </div>
 
-    // Volume inicial: 30%
-    musica.volume = 0.3;
+        <div class="footer-links">
+            <a href="">SOBRE</a>
+            <a href="">CONTATO</a>
+            <a href="">PRIVACIDADE</a>
+            <a href="">TERMOS</a>
+        </div>
 
-    // Atualiza visualmente a barra
-    function atualizarBarra(barra) {
-        const porcentagem =
-            ((barra.value - barra.min) / (barra.max - barra.min)) * 100;
+    </div>
 
-        barra.style.setProperty("--valor", `${porcentagem}%`);
-    }
+    <div class="footer-bottom">
 
+        <p>
+            © 2026 BAYONETTA — TODOS OS DIREITOS RESERVADOS.
+        </p>
 
-    // Inicializa a barra de volume em 30%
-    volume.value = 0.3;
-    atualizarBarra(volume);
+        <div class="footer-social">
+            <a href="">INSTAGRAM</a>
+            <a href="">TWITTER</a>
+        </div>
 
-
-    // Botão Play / Pause
-    playButton.addEventListener("click", () => {
-
-        if (musica.paused) {
-
-            musica.play();
-            playButton.textContent = "❚❚";
-
-        } else {
-
-            musica.pause();
-            playButton.textContent = "▶";
-
-        }
-
-    });
-
-
-    // Atualiza a barra de progresso conforme a música toca
-    musica.addEventListener("timeupdate", () => {
-
-        if (!isNaN(musica.duration)) {
-
-            progress.value =
-                (musica.currentTime / musica.duration) * 100;
-
-            atualizarBarra(progress);
-
-        }
-
-    });
-
-
-    // Permite mudar a posição da música
-    progress.addEventListener("input", () => {
-
-        musica.currentTime =
-            (progress.value / 100) * musica.duration;
-
-        atualizarBarra(progress);
-
-    });
-
-
-    // Controle de volume
-    volume.addEventListener("input", () => {
-
-        musica.volume = volume.value;
-
-        atualizarBarra(volume);
-
-    });
-
-
-    // Tenta iniciar a música automaticamente
-    document.addEventListener("click", () => {
-
-        musica.play().then(() => {
-
-            playButton.textContent = "❚❚";
-
-        }).catch(() => {
-
-            // O navegador pode bloquear autoplay
-            console.log("Autoplay bloqueado pelo navegador.");
-
-        });
-
-    }, { once: true });
-
-</script>
+    </div>
+<a href=""></a>
+</footer>
 </html>
